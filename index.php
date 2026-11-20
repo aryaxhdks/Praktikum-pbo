@@ -6,14 +6,19 @@ require('./method-static.php');
 use pbo\marketplace\Produk;
 
 //Object
-$produk = new Produk('P001', 'Laptop', 1000000, 5);
+$produk = new Produk();
+
+$produk->setkode('P001')
+        ->setnama('Laptop')
+        ->setharga(1000000)
+        ->setstok(5);
 
 //Hasil
-echo "Produk: ". $produk->nama;
+echo "Produk: ". $produk->getnama();
 echo "<br/>";
-echo "Harga: ". $produk->harga;
+echo "Harga: ". $produk->getharga();
 echo "<br/>";
-echo "Stok: ". $produk->stok;
+echo "Stok: ". $produk->getstok();
 echo "<br/>";
 echo "pajak: ".$produk->pajak() ."%";
 echo "<br/>";
