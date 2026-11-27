@@ -1,7 +1,7 @@
 <?php
 
 //
-require('./method-static.php');
+require('./propertyConstant.php');
 
 use pbo\marketplace\Produk;
 
